@@ -30,11 +30,44 @@ namespace Programming_Assingment_1_Animal_List
         private string Noise;
         private int Weight;
 
+        /**
+          * The printInfo method prints the information associated with an Animal object.
+          *
+          * @pre An animal object must be declared.
+          * @return void This function returns nothing.
+          * @post The information has been printed.
+          * 
+          */
         public abstract void printInfo();
+
+        /**
+          * The makeNoise method prints the information associated with an Animal object.
+          *
+          * @pre An animal object must be declared.
+          * @return void This function returns nothing.
+          * @post The noise has been printed.
+          * 
+          */
         public abstract void makeNoise();
+
+        /**
+          * The ageUp method increases the age value for an Animal object
+          *
+          * @pre An animal object must be declared.
+          * @return void This function returns nothing.
+          * @post The age value has been increased.
+          * 
+          */
         public abstract void ageUp();
 
-        //this is a constructor for the animal object
+        /**
+          * The attributes method takes in user specified values for Name, Age, and Weight so that they can be initialized.
+          *
+          * @pre An animal object must be declared.
+          * @return void This function returns nothing.
+          * @post The variables have been initialized.
+          * 
+          */
         public abstract void attributes(string nameInput, int ageInput, int weightInput);
 
         //getter and setter for the Name value. We need this because they are private.
@@ -51,7 +84,7 @@ namespace Programming_Assingment_1_Animal_List
             }
         }
 
-        //getter and setter for the Age variable
+        //getter and setter for the Age variable.
         public int age
         {
             get
@@ -65,7 +98,7 @@ namespace Programming_Assingment_1_Animal_List
             }
         }
 
-        //getter and setter for the noise variable
+        //getter and setter for the noise variable.
         public string noise
         {
             get
