@@ -15,7 +15,13 @@ using System.Threading.Tasks;
 
 namespace Programming_Assingment_1_Animal_List
 {
-
+    /**
+      * The Animal class contains abstract methods for an Animal object that are to be overwritten.
+      *
+      * @class Animal
+      * @brief abstract class representing an animal.
+      *
+      */
     public abstract class Animal
     {
         //private variables containing the different attributes of an animal
@@ -28,7 +34,7 @@ namespace Programming_Assingment_1_Animal_List
         public abstract void makeNoise();
         public abstract void ageUp();
 
-        //this method is to take in user input and assigns it to the variables in the class
+        //this is a constructor for the animal object
         public abstract void attributes(string nameInput, int ageInput, int weightInput);
 
         //getter and setter for the Name value
@@ -88,6 +94,13 @@ namespace Programming_Assingment_1_Animal_List
         }
     }
 
+    /**
+      * The Cat class overrwrites the abstract methods in the Animal class for a Cat object
+      *
+      * @class Cat
+      * @brief concrete class representing a cat
+      *
+      */
     public class Cat : Animal
     {
         public override void attributes(string nameInput, int ageInput, int weightInput) 
@@ -117,6 +130,13 @@ namespace Programming_Assingment_1_Animal_List
         }
     }
 
+    /**
+      * The Cassowary class overrwrites the abstract methods in the Animal class for a Cassowary object
+      *
+      * @class Cassowary
+      * @brief concrete class representing a cassowary
+      *
+      */
     public class Cassowary : Animal
     {
         public override void attributes(string nameInput, int ageInput, int weightInput)
@@ -146,6 +166,13 @@ namespace Programming_Assingment_1_Animal_List
         }
     }
 
+  /**
+    * The Crab class overrwrites the abstract methods in the Animal class for a Crab object
+    *
+    * @class Crab
+    * @brief concrete class representing a crab
+    *
+    */
     public class Crab : Animal
     {
         public override void attributes(string nameInput, int ageInput, int weightInput)
@@ -175,6 +202,13 @@ namespace Programming_Assingment_1_Animal_List
         }
     }
 
+  /**
+    * The World class contains the driver for the code along with a method to help with creating the Animal list.
+    *
+    * @class World
+    * @brief main driver for the code
+    *
+    */
     class World
     {
         //this line declares the animal list
