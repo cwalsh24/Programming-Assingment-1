@@ -90,7 +90,7 @@ namespace Programming_Assingment_1_Animal_List
 
     public class Cat : Animal
     {
-        public override void attributes(string nameInput, int ageInput, int weightInput) //if the name means type we dont need it
+        public override void attributes(string nameInput, int ageInput, int weightInput) 
         {
             noise = "meow";
             name = nameInput;
@@ -103,13 +103,11 @@ namespace Programming_Assingment_1_Animal_List
             Console.WriteLine("Name: " + name);
             Console.WriteLine("Noise: " + noise);
             Console.WriteLine("Age: " + age);
-            Console.WriteLine("Weight:  " + weight + " lbs");
-            //Console.ReadKey();
+            Console.WriteLine("Weight: " + weight + " lbs");
         }
         public override void makeNoise()
         {
-            Console.WriteLine(noise); //needs to use the variable
-            //Console.ReadKey();
+            Console.WriteLine(noise);
         }
 
         public override void ageUp()
@@ -121,7 +119,7 @@ namespace Programming_Assingment_1_Animal_List
 
     public class Cassowary : Animal
     {
-        public override void attributes(string nameInput, int ageInput, int weightInput) //if the name means type we dont need it
+        public override void attributes(string nameInput, int ageInput, int weightInput)
         {
             noise = "squawk";
             name = nameInput;
@@ -134,13 +132,11 @@ namespace Programming_Assingment_1_Animal_List
             Console.WriteLine("Name: " + name);
             Console.WriteLine("Noise: " + noise);
             Console.WriteLine("Age: " + age);
-            Console.WriteLine("Weight:  " + weight + " lbs");
-            //Console.ReadKey();
+            Console.WriteLine("Weight: " + weight + " lbs");
         }
         public override void makeNoise()
         {
-            Console.WriteLine(noise); //needs to use the variable
-            //Console.ReadKey();
+            Console.WriteLine(noise); 
         }
 
         public override void ageUp()
@@ -165,13 +161,11 @@ namespace Programming_Assingment_1_Animal_List
             Console.WriteLine("Name: " + name);
             Console.WriteLine("Noise: " + noise);
             Console.WriteLine("Age: " + age);
-            Console.WriteLine("Weight:  " + weight + " lbs");
-            //Console.ReadKey();
+            Console.WriteLine("Weight: " + weight + " lbs");
         }
         public override void makeNoise()
         {
-            Console.WriteLine(noise); //needs to use the variable
-            //Console.ReadKey();
+            Console.WriteLine(noise); 
         }
 
         public override void ageUp()
