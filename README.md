@@ -15,3 +15,4 @@ This program is designed to allow users to create a list of animals. The program
 * For readability, I made it so the create a new animal function on the menu called a method that exists inside of the World class called newEntry. This avoids having to do the functions inside this method in the main.
 * The menu is designed to loop indefinitely until the user chooses to exit. 
 * There is no way to delete animals from the list because this was not in the instructions of the assignment. 
+* I attempted to change the name of program.cs to AnimalProgram.cs, but github wouldn't take it so I had to leave it as is.
