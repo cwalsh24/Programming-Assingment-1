@@ -37,7 +37,7 @@ namespace Programming_Assingment_1_Animal_List
         //this is a constructor for the animal object
         public abstract void attributes(string nameInput, int ageInput, int weightInput);
 
-        //getter and setter for the Name value
+        //getter and setter for the Name value. We need this because they are private.
         public string name
         {
             get
@@ -51,7 +51,7 @@ namespace Programming_Assingment_1_Animal_List
             }
         }
 
-        //getter and setter for the age variable
+        //getter and setter for the Age variable
         public int age
         {
             get
@@ -105,6 +105,7 @@ namespace Programming_Assingment_1_Animal_List
     {
         public override void attributes(string nameInput, int ageInput, int weightInput) 
         {
+            //noise is automatically set when the constructor is called because there isn't a reason for it to change
             noise = "meow";
             name = nameInput;
             age = ageInput;
@@ -112,6 +113,7 @@ namespace Programming_Assingment_1_Animal_List
         }
         public override void printInfo()
         {
+            //prints out the information for the Cat object
             Console.WriteLine("Species: Cat");
             Console.WriteLine("Name: " + name);
             Console.WriteLine("Noise: " + noise);
@@ -120,11 +122,13 @@ namespace Programming_Assingment_1_Animal_List
         }
         public override void makeNoise()
         {
+            //prints out the noise the cat makes
             Console.WriteLine(noise);
         }
 
         public override void ageUp()
         {
+            //increases the age value by one
             Console.WriteLine(name + "'s age has been increased by one year");
             age = age + 1;
         }
@@ -148,6 +152,7 @@ namespace Programming_Assingment_1_Animal_List
         }
         public override void printInfo()
         {
+            //prints all of the information associated with the cassowary object
             Console.WriteLine("Species: Cassowary");
             Console.WriteLine("Name: " + name);
             Console.WriteLine("Noise: " + noise);
@@ -156,11 +161,13 @@ namespace Programming_Assingment_1_Animal_List
         }
         public override void makeNoise()
         {
+            //prints the cassowary noise to the user
             Console.WriteLine(noise); 
         }
 
         public override void ageUp()
         {
+            //increases the age value by 1
             Console.WriteLine(name + "'s age has been increased by one year");
             age = age + 1;
         }
@@ -184,6 +191,7 @@ namespace Programming_Assingment_1_Animal_List
         }
         public override void printInfo()
         {
+            //prints the information associated with the crab object
             Console.WriteLine("Species: Crab");
             Console.WriteLine("Name: " + name);
             Console.WriteLine("Noise: " + noise);
@@ -192,11 +200,13 @@ namespace Programming_Assingment_1_Animal_List
         }
         public override void makeNoise()
         {
+            //prints the noise the crab makes
             Console.WriteLine(noise); 
         }
 
         public override void ageUp()
         {
+            //increases the crab's age by 1
             Console.WriteLine(name + "'s age has been increased by one year");
             age = age + 1;
         }
