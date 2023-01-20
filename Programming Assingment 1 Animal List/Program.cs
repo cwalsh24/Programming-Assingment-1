@@ -451,6 +451,20 @@ namespace Programming_Assingment_1_Animal_List
             Console.Write("Enter the weight of your animal in pounds: ");
             Weight = Console.ReadLine();
 
+            //checks to see if the Age value is valid
+            if(int.TryParse(Age, out int value1) == false)
+            {
+                Console.Write("Invalid Input");
+                return;
+            }
+
+            //checks to see if the Weight value is valid
+            if (int.TryParse(Weight, out int value2) == false)
+            {
+                Console.Write("Invalid Input");
+                return;
+            }
+
             //we need to call the attribute method to send the user inputted information to the 
             //class. The Age and Weight values must be converted from strings to integers. 
             newAnimal.attributes(Name, Convert.ToInt32(Age), Convert.ToInt32(Weight));
