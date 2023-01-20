@@ -2,7 +2,7 @@
  * @file Program.cs
  * @author Connor Walsh
  * @date 2023-1-19
- * @brief this is the library header file
+ * @brief this is the Animal List program
  * 
  * This program allows the user to build a list of animals and search for information on said list. 
  */
