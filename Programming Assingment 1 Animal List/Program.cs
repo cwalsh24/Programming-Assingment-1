@@ -32,6 +32,7 @@ namespace Programming_Assingment_1_Animal_List
 
         /**
           * The printInfo method prints the information associated with an Animal object.
+          * This method is abstract so it does not contain any actual implementation. It is meant to be overwritten.
           *
           * @pre An animal object must be declared.
           * @return void This function returns nothing.
@@ -42,6 +43,7 @@ namespace Programming_Assingment_1_Animal_List
 
         /**
           * The makeNoise method prints the information associated with an Animal object.
+          * This method is abstract so it does not contain any actual implementation. It is meant to be overwritten.
           *
           * @pre An animal object must be declared.
           * @return void This function returns nothing.
@@ -52,6 +54,7 @@ namespace Programming_Assingment_1_Animal_List
 
         /**
           * The ageUp method increases the age value for an Animal object
+          * This method is abstract so it does not contain any actual implementation. It is meant to be overwritten.
           *
           * @pre An animal object must be declared.
           * @return void This function returns nothing.
@@ -62,6 +65,7 @@ namespace Programming_Assingment_1_Animal_List
 
         /**
           * The attributes method takes in user specified values for Name, Age, and Weight so that they can be initialized.
+          * This method is abstract so it does not contain any actual implementation. It is meant to be overwritten.
           *
           * @pre An animal object must be declared.
           * @return void This function returns nothing.
@@ -70,7 +74,14 @@ namespace Programming_Assingment_1_Animal_List
           */
         public abstract void attributes(string nameInput, int ageInput, int weightInput);
 
-        //getter and setter for the Name value. We need this because they are private.
+        /**
+          * These are the getter and setter methods for the Name variable. We need this because it is private.
+          *
+          * @pre An animal object must be declared.
+          * @return The setter method is void, the getter returns the Name value which is a string.
+          * @post The getter returns the value of Name, the setter changes the value of Name.
+          * 
+          */
         public string name
         {
             get
@@ -84,7 +95,14 @@ namespace Programming_Assingment_1_Animal_List
             }
         }
 
-        //getter and setter for the Age variable.
+        /**
+          * These are the getter and setter methods for the Age variable. We need this because it is private.
+          *
+          * @pre An animal object must be declared.
+          * @return The setter method is void, the getter returns the Age value which is an int.
+          * @post The getter returns the value of Age, the setter changes the value of Age.
+          * 
+          */
         public int age
         {
             get
@@ -98,7 +116,14 @@ namespace Programming_Assingment_1_Animal_List
             }
         }
 
-        //getter and setter for the noise variable.
+        /**
+          * These are the getter and setter methods for the Noise variable. We need this because it is private.
+          *
+          * @pre An animal object must be declared.
+          * @return The setter method is void, the getter returns the Noise value which is a string.
+          * @post The getter returns the value of Noise, the setter changes the value of Noise.
+          * 
+          */
         public string noise
         {
             get
@@ -112,7 +137,14 @@ namespace Programming_Assingment_1_Animal_List
             }
         }
 
-        //getter and setter for the weight variable
+        /**
+          * These are the getter and setter methods for the Weight variable. We need this because it is private.
+          *
+          * @pre An animal object must be declared.
+          * @return The setter method is void, the getter returns the Weight value which is an int.
+          * @post The getter returns the value of Weight, the setter changes the value of Weight.
+          * 
+          */
         public int weight
         {
             get
@@ -136,6 +168,15 @@ namespace Programming_Assingment_1_Animal_List
       */
     public class Cat : Animal
     {
+        /**
+          * The attributes method from the Animal class is overwritten here in order to replace the values of 
+          * it's private variables with ones that are associated with a Cat. Three of these are user inputted.
+          *
+          * @pre A Cat object must be declared.
+          * @return void This function returns nothing.
+          * @post The private variables have been assigned their values.
+          * 
+          */
         public override void attributes(string nameInput, int ageInput, int weightInput) 
         {
             //noise is automatically set when the constructor is called because there isn't a reason for it to change
@@ -144,6 +185,16 @@ namespace Programming_Assingment_1_Animal_List
             age = ageInput;
             weight = weightInput;
         }
+
+        /**
+          * The printInfo method from the Animal class is overwritten here in order to print the information
+          * associated with the Cat object. 
+          *
+          * @pre A Cat object must be declared.
+          * @return void This function returns nothing.
+          * @post The information for the Cat object has been printed.
+          * 
+          */
         public override void printInfo()
         {
             //prints out the information for the Cat object
@@ -153,12 +204,31 @@ namespace Programming_Assingment_1_Animal_List
             Console.WriteLine("Age: " + age);
             Console.WriteLine("Weight: " + weight + " lbs");
         }
+
+        /**
+          * The makeNoise method from the Animal class is overwritten here in order to print the noise
+          * associated with the Cat object. 
+          *
+          * @pre A Cat object must be declared.
+          * @return void This function returns nothing.
+          * @post The noise the cat makes is printed.
+          * 
+          */
         public override void makeNoise()
         {
             //prints out the noise the cat makes
             Console.WriteLine(noise);
         }
 
+        /**
+          * The ageUp method from the Animal class is overwritten here in order to increase the Age value 
+          * associated with the Cat object. 
+          *
+          * @pre A Cat object must be declared.
+          * @return void This function returns nothing.
+          * @post The Age value is increased by 1, a message is printed to the user. 
+          * 
+          */
         public override void ageUp()
         {
             //increases the age value by one
@@ -176,6 +246,15 @@ namespace Programming_Assingment_1_Animal_List
       */
     public class Cassowary : Animal
     {
+        /**
+          * The attributes method from the Animal class is overwritten here in order to replace the values of 
+          * it's private variables with ones that are associated with a Cassowary. Three of these are user inputted.
+          *
+          * @pre A Cassowary object must be declared.
+          * @return void This function returns nothing.
+          * @post The private variables have been assigned their values.
+          * 
+          */
         public override void attributes(string nameInput, int ageInput, int weightInput)
         {
             noise = "squawk";
@@ -183,6 +262,16 @@ namespace Programming_Assingment_1_Animal_List
             age = ageInput;
             weight = weightInput;
         }
+
+        /**
+          * The printInfo method from the Animal class is overwritten here in order to print the information
+          * associated with the Cassowary object. 
+          *
+          * @pre A Cassowary object must be declared.
+          * @return void This function returns nothing.
+          * @post The information for the Cassowary object has been printed.
+          * 
+          */
         public override void printInfo()
         {
             //prints all of the information associated with the cassowary object
@@ -192,12 +281,31 @@ namespace Programming_Assingment_1_Animal_List
             Console.WriteLine("Age: " + age);
             Console.WriteLine("Weight: " + weight + " lbs");
         }
+
+        /**
+          * The makeNoise method from the Animal class is overwritten here in order to print the noise
+          * associated with the Cassowary object. 
+          *
+          * @pre A Cassowary object must be declared.
+          * @return void This function returns nothing.
+          * @post The noise the Cassowary makes is printed.
+          * 
+          */
         public override void makeNoise()
         {
             //prints the cassowary noise to the user
             Console.WriteLine(noise); 
         }
 
+        /**
+          * The ageUp method from the Animal class is overwritten here in order to increase the Age value 
+          * associated with the Cassowary object. 
+          *
+          * @pre A Cassowary object must be declared.
+          * @return void This function returns nothing.
+          * @post The Age value is increased by 1, a message is printed to the user. 
+          * 
+          */
         public override void ageUp()
         {
             //increases the age value by 1
@@ -215,6 +323,15 @@ namespace Programming_Assingment_1_Animal_List
     */
     public class Crab : Animal
     {
+        /**
+          * The attributes method from the Animal class is overwritten here in order to replace the values of 
+          * it's private variables with ones that are associated with a Crab. Three of these are user inputted.
+          *
+          * @pre A Crab object must be declared.
+          * @return void This function returns nothing.
+          * @post The private variables have been assigned their values.
+          * 
+          */
         public override void attributes(string nameInput, int ageInput, int weightInput)
         {
             noise = "money money money";
@@ -222,6 +339,16 @@ namespace Programming_Assingment_1_Animal_List
             age = ageInput;
             weight = weightInput;
         }
+
+        /**
+          * The printInfo method from the Animal class is overwritten here in order to print the information
+          * associated with the Crab object. 
+          *
+          * @pre A Crab object must be declared.
+          * @return void This function returns nothing.
+          * @post The information for the Crab object has been printed.
+          * 
+          */
         public override void printInfo()
         {
             //prints the information associated with the crab object
@@ -231,12 +358,31 @@ namespace Programming_Assingment_1_Animal_List
             Console.WriteLine("Age: " + age);
             Console.WriteLine("Weight: " + weight + " lbs");
         }
+
+        /**
+          * The makeNoise method from the Animal class is overwritten here in order to print the noise
+          * associated with the Crab object. 
+          *
+          * @pre A Crab object must be declared.
+          * @return void This function returns nothing.
+          * @post The noise the crab makes is printed.
+          * 
+          */
         public override void makeNoise()
         {
             //prints the noise the crab makes
             Console.WriteLine(noise); 
         }
 
+        /**
+          * The ageUp method from the Animal class is overwritten here in order to increase the Age value 
+          * associated with the Crab object. 
+          *
+          * @pre A Crab object must be declared.
+          * @return void This function returns nothing.
+          * @post The Age value is increased by 1, a message is printed to the user. 
+          * 
+          */
         public override void ageUp()
         {
             //increases the crab's age by 1
@@ -257,7 +403,15 @@ namespace Programming_Assingment_1_Animal_List
         //this line declares the animal list
         List<Animal> animalList = new List<Animal>();
 
-        //this method adds a new animal to the list
+        /**
+          * The newEntry method is designed to take in a new Animal object and store it into the list with 
+          * the user specified attributes.
+          *
+          * @pre The list and Animal object must be declared and a string must be created. 
+          * @return void This function returns nothing.
+          * @post The new Animal object has been stored inside of the list.
+          * 
+          */
         static void newEntry(string choice, List<Animal> animalList, Animal newAnimal)
         {
             //these variables will store in the user inputted attribute values
@@ -308,6 +462,12 @@ namespace Programming_Assingment_1_Animal_List
             Console.WriteLine(Name + " has been added successfully");
         }
 
+
+        /**
+          * This is the main method for the program. It contains the looping menu that allows the user to call the different
+          * classes and the methods inside of them to build their animal list.
+          * 
+          */
         static void Main(string[] args)
         {
             //declare the existance of a world object so we can use the methods
