@@ -16,7 +16,8 @@ using System.Threading.Tasks;
 namespace Programming_Assingment_1_Animal_List
 {
     /**
-      * The Animal class contains abstract methods for an Animal object that are to be overwritten.
+      * The Animal class contains abstract methods for an Animal object that are to be overwritten along with 
+      * getter and setter methods to access its private variables.
       *
       * @class Animal
       * @brief abstract class representing an animal.
@@ -405,7 +406,7 @@ namespace Programming_Assingment_1_Animal_List
 
         /**
           * The newEntry method is designed to take in a new Animal object and store it into the list with 
-          * the user specified attributes.
+          * the user specified attributes. Without sending a list reference as a parameter, this does not work.
           *
           * @pre The list and Animal object must be declared and a string must be created. 
           * @return void This function returns nothing.
@@ -426,21 +427,15 @@ namespace Programming_Assingment_1_Animal_List
             }
 
             //if the number is 2 then a Cassowary object is created
-            else if (choice == "2")
+            if (choice == "2")
             {
                 newAnimal = new Cassowary();
             }
 
             //if the number is 3 then a Crab object is created
-            else if (choice == "3")
+            if (choice == "3")
             {
                 newAnimal = new Crab();
-            }
-
-            //the function exits if the number is something other than 1, 2, or 3
-            else
-            {
-                return;
             }
 
             //the following lines prompt the user to enter information about the animal
@@ -454,14 +449,18 @@ namespace Programming_Assingment_1_Animal_List
             //checks to see if the Age value is valid
             if(int.TryParse(Age, out int value1) == false)
             {
+                Console.WriteLine();
                 Console.Write("Invalid Input");
+                Console.WriteLine();
                 return;
             }
 
             //checks to see if the Weight value is valid
             if (int.TryParse(Weight, out int value2) == false)
             {
+                Console.WriteLine();
                 Console.Write("Invalid Input");
+                Console.WriteLine();
                 return;
             }
 
