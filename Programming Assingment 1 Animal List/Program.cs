@@ -495,15 +495,16 @@ namespace Programming_Assingment_1_Animal_List
             Console.WriteLine("3. Print the noise of an animal in the list");
             Console.WriteLine("4. Increase the age of an animal in the list");
             Console.WriteLine("5. Add a new animal to the list");
-            Console.WriteLine("6. Exit");
+            Console.WriteLine("6. Print menu again");
+            Console.WriteLine("7. Exit");
             Console.WriteLine();
 
             //these lines prompt the user for their choice and store the choice
             Console.Write("Enter the number of the function you would like to perform: ");
             userInput = Console.ReadLine();
 
-            //if the user enters the number 6, the loop exits and the program closes
-            while (userInput != "6")
+            //if the user enters the number 7, the loop exits and the program closes
+            while (userInput != "7")
             {
                 //if the user selects 1, the entire list and all info within is printed
                 if (userInput == "1")
@@ -598,6 +599,19 @@ namespace Programming_Assingment_1_Animal_List
 
                     }
 
+                }
+
+                //if the user types the number 6 then the menu is printed again
+                if (userInput == "6")
+                {
+                    Console.WriteLine("Welcome to the Animal List program!");
+                    Console.WriteLine("1. Print the list");
+                    Console.WriteLine("2. Print the info of an animal in the list");
+                    Console.WriteLine("3. Print the noise of an animal in the list");
+                    Console.WriteLine("4. Increase the age of an animal in the list");
+                    Console.WriteLine("5. Add a new animal to the list");
+                    Console.WriteLine("6. Print menu again");
+                    Console.WriteLine("7. Exit");
                 }
 
                 //these lines prompt the user for another choice
