@@ -509,11 +509,13 @@ namespace Programming_Assingment_1_Animal_List
                 //if the user selects 1, the entire list and all info within is printed
                 if (userInput == "1")
                 {
+                    Console.WriteLine();
                     //loops through the list and prints the info
                     foreach (Animal a in p.animalList)
                     {
                         //prints the info of the current animal
                         a.printInfo();
+                        Console.WriteLine();
                     }
                 }
 
